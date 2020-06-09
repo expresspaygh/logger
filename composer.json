@@ -1,0 +1,29 @@
+{
+  "name": "expresspay/exp-logger",
+  "description": "A simple class to aid in quick debugging",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jeffery Osei",
+      "email": "jefferyosei@expresspaygh.com"
+    },
+    {
+      "name": "Ellis Adigvom",
+      "email": "ellisadigvom@expresspaygh.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Expay\\Logger\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.2",
+    "phplucidframe/console-table": "^1.2"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.9"
+  }
+}
