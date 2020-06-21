@@ -1,7 +1,7 @@
 ## composer-test-packages: Command to install packages required for testing
 composer-packages:
 	@echo "=============Install packages required for testing============"
-	composer install
+	composer install && composer update
 
 ## phpunit: Run PHPUnit tests
 phpunit:
