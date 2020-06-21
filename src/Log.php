@@ -2,8 +2,6 @@
 
 namespace Expay\Logger;
 
-require_once(__DIR__."/../vendor/autoload.php");
-
 use LucidFrame\Console\ConsoleTable;
 
 /**

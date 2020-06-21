@@ -3,10 +3,9 @@ composer-packages:
 	@echo "=============Install packages required for testing============"
 	composer install
 
-## run-tests: Command to run all test cases
-run-tests:
-	@echo "=============Run all test cases============"
-	cd tests && php LoggerRun info success error debug runner
+## phpunit: Run PHPUnit tests
+phpunit:
+	composer run test
 
 ## help: Command to view help
 help: Makefile
