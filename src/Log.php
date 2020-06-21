@@ -10,6 +10,14 @@ use LucidFrame\Console\ConsoleTable;
 class Log
 {    
     /**
+     * __construct
+     *
+     * @return void
+     */
+    public function __construct()
+    {}
+    
+    /**
      * stringFormat
      *
      * @param  mixed $text
@@ -17,7 +25,7 @@ class Log
      * @param  mixed $bg
      * @return array
      */
-    private static function stringFormat(string $text = null, string $color = null, string $bg = null) : array
+    private function stringFormat(string $text = null, string $color = null, string $bg = null) : array
     {
         $formats = [
             // text formats
@@ -61,7 +69,7 @@ class Log
      * @param  mixed $htmlEntity
      * @return string
      */
-    private static function getEmoji(string $htmlEntity) : string
+    private function getEmoji(string $htmlEntity) : string
     {
         return mb_convert_encoding($htmlEntity, 'UTF-8', 'HTML-ENTITIES');
     }
@@ -73,7 +81,7 @@ class Log
      * @param  mixed $char
      * @return string
      */
-    private static function getLine(int $num = 100, string $char = "*") : string
+    private function getLine(int $num = 100, string $char = "*") : string
     {
         $output = "";
         for ($i = 0; $i < $num; $i++) {
@@ -92,7 +100,7 @@ class Log
      * @param  mixed $lock
      * @return int
      */
-    public static function error($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
+    public function error($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
     {
         // get formatters
         $message = ($toArr == true) ? print_r($msg, true) : json_encode($msg);
@@ -132,7 +140,7 @@ class Log
      * @param  mixed $lock
      * @return int
      */
-    public static function info($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
+    public function info($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
     {
         // get formatters
         $message = ($toArr == true) ? print_r($msg, true) : json_encode($msg);
@@ -172,7 +180,7 @@ class Log
      * @param  mixed $lock
      * @return int
      */
-    public static function success($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
+    public function success($msg, $toArr = false, $hasLine = false, $customHeader=null, $lock=false) : int
     {
         // get formatters
         $message = ($toArr == true) ? print_r($msg, true) : json_encode($msg);
@@ -213,7 +221,7 @@ class Log
      * @param  mixed $lock
      * @return int
      */
-    public static function debug($msg, $file = "", $header = "DEBUG", $hasLine = false, $customHeader=null, $lock=false) : int
+    public function debug($msg, $file = "", $header = "DEBUG", $hasLine = false, $customHeader=null, $lock=false) : int
     {
         // set custom debug file
         if(!empty($file))ini_set('error_log',$file);
@@ -261,7 +269,7 @@ class Log
      * @param  mixed $lock
      * @return int
      */
-    public static function runner(string $msg, string $color = "green", bool $spacer = false, string $emoji = "&#128584;",$lock=false) : int
+    public function runner(string $msg, string $color = "green", bool $spacer = false, string $emoji = "&#128584;",$lock=false) : int
     {
         // get text color
         $format = self::stringFormat('bold', $color);
