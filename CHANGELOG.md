@@ -6,3 +6,5 @@
 * Update composer.json
 * Add changelog
 * Remove composer.lock
+* Add package versions and minimum stability
+* Create branch for version 1.0.0

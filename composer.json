@@ -3,6 +3,7 @@
   "description": "A simple class to aid in quick debugging",
   "type": "library",
   "license": "MIT",
+  "version":"1.0.0",
   "authors": [
     {
       "name": "Jeffery Osei",
@@ -13,6 +14,7 @@
       "email": "ellisadigvom@expresspaygh.com"
     }
   ],
+  "minimum-stability": "stable",
   "scripts": {
     "test": "phpunit"
   },
